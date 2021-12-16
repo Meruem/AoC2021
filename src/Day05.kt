@@ -20,10 +20,6 @@ data class VentsBoard(val board: List<MutableList<Int>>) {
     fun computeResult() = board.flatten().count { it >= 2 }
 }
 
-data class Pos(val x: Int, val y: Int)
-data class Line(val a: Pos, val b: Pos)
-
-
 fun parseLine(line: String): Line {
 
     fun parsePos(s: String): Pos {
